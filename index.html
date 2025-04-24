@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      <span class="text-blue-600">Ask</span><span
+      class="text-orange-500">Better</span> – Smarter AI Prompts
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon.ico" />
+    <style>
+      /* Add custom colors if Tailwind defaults aren't exact */
+      .text-askbetter-blue {
+        color: #00529b;
+      } /* Approximate blue from logo */
+      .text-askbetter-orange {
+        color: #f7941e;
+      } /* Approximate orange from logo */
+      .bg-askbetter-orange {
+        background-color: #f7941e;
+      }
+      .hover\:bg-askbetter-orange-dark:hover {
+        background-color: #e0800f;
+      } /* Darker shade for hover */
+      .focus\:ring-askbetter-blue:focus {
+        --tw-ring-color: #00529b;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 font-sans pt-16">
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo in navbar -->
+          <div>
+            <a href="#hero" class="flex items-center py-4 px-2">
+              <img
+                src="askbetter-logo.png"
+                alt="AskBetter Logo"
+                class="h-8 mr-2"
+              />
+              <span class="font-semibold text-lg text-askbetter-blue">Ask</span>
+              <span class="font-semibold text-lg text-askbetter-orange"
+                >Better</span
+              >
+            </a>
+          </div>
+          <!-- Navigation Links -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a
+              href="#hero"
+              class="py-2 px-3 text-gray-700 hover:text-askbetter-blue"
+              >Home</a
+            >
+            <a
+              href="#how-it-works"
+              class="py-2 px-3 text-gray-700 hover:text-askbetter-blue"
+              >How It Works</a
+            >
+            <a
+              href="#features"
+              class="py-2 px-3 text-gray-700 hover:text-askbetter-blue"
+              >Features</a
+            >
+            <a
+              href="#waitlist"
+              class="py-2 px-3 bg-askbetter-orange text-white rounded hover:bg-askbetter-orange-dark transition"
+              >Join Waitlist</a
+            >
+          </div>
+          <!-- Mobile Menu Button (optional) -->
+          <div class="md:hidden flex items-center">
+            <button class="mobile-menu-button p-4">
+              <svg
+                class="w-6 h-6 text-gray-700"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu (optional) -->
+      <div class="mobile-menu hidden md:hidden">
+        <a href="#hero" class="block py-2 px-4 text-sm hover:bg-gray-100"
+          >Home</a
+        >
+        <a
+          href="#how-it-works"
+          class="block py-2 px-4 text-sm hover:bg-gray-100"
+          >How It Works</a
+        >
+        <a href="#features" class="block py-2 px-4 text-sm hover:bg-gray-100"
+          >Features</a
+        >
+        <a
+          href="#waitlist"
+          class="block py-2 px-4 text-sm hover:bg-gray-100 bg-askbetter-orange text-white"
+          >Join Waitlist</a
+        >
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center px-6 text-center bg-gradient-to-br from-blue-50 to-white"
+    >
+      <div class="max-w-2xl">
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <span class="text-askbetter-blue">Ask</span
+          ><span class="text-askbetter-orange">Better</span> helps you write
+          smarter AI prompts.
+        </h1>
+        <p class="text-lg text-gray-600 mb-6">
+          Optimize your questions and commands for ChatGPT, Claude, Gemini and
+          more.
+        </p>
+        <form
+          id="waitlist"
+          name="waitlist"
+          method="POST"
+          data-netlify="true"
+          class="flex flex-col sm:flex-row items-center justify-center gap-3"
+        >
+          <input type="hidden" name="form-name" value="waitlist" />
+          <input
+            name="email"
+            type="email"
+            required
+            placeholder="Enter your email"
+            class="px-4 py-2 rounded border border-gray-300 w-full sm:w-2/3 focus:outline-none focus:ring-2 focus:ring-askbetter-blue"
+          />
+          <button
+            type="submit"
+            class="px-6 py-2 bg-askbetter-orange text-white rounded hover:bg-askbetter-orange-dark transition"
+          >
+            Join Waitlist
+          </button>
+        </form>
+
+        <p id="success-message" class="hidden text-green-500 mt-4">
+          Thank you for joining the waitlist!
+        </p>
+        <p class="mt-4 text-sm text-gray-500">No spam, just early access.</p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="py-16 px-6 bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-10">How It Works</h2>
+        <div class="grid sm:grid-cols-3 gap-8">
+          <div>
+            <!-- Input Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-16 h-16 mx-auto mb-4 text-askbetter-blue"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+              />
+            </svg>
+            <h3 class="text-xl font-semibold text-askbetter-blue mb-2">
+              1. Input
+            </h3>
+            <p>Enter your initial AI prompt.</p>
+          </div>
+          <div>
+            <!-- Enhance Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-16 h-16 mx-auto mb-4 text-askbetter-blue"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.813 15.75 12 21l2.188-5.25L19.5 13.5l-5.25-2.188L12 6l-2.188 5.313L4.5 13.5l5.313 2.25z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.5 4.5v1.875m0 0V4.5m0 1.875h1.875m-1.875 0H14.625M19.5 7.5v1.125m0 0V7.5m0 1.125h1.125m-1.125 0H18.375"
+              />
+            </svg>
+            <h3 class="text-xl font-semibold text-askbetter-blue mb-2">
+              2. Enhance
+            </h3>
+            <p>
+              <span class="text-askbetter-blue">Ask</span
+              ><span class="text-askbetter-orange">Better</span> improves it
+              using smart rules and AI feedback.
+            </p>
+          </div>
+          <div>
+            <!-- Copy & Paste Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-16 h-16 mx-auto mb-4 text-askbetter-blue"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"
+              />
+            </svg>
+            <h3 class="text-xl font-semibold text-askbetter-blue mb-2">
+              3. Copy & Paste
+            </h3>
+            <p>Use the improved prompt in your favorite AI tool.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="bg-blue-50 py-16 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-10">
+          Why <span class="text-askbetter-blue">Ask</span
+          ><span class="text-askbetter-orange">Better</span>?
+        </h2>
+        <div class="grid sm:grid-cols-2 gap-8 text-left">
+          <div>
+            <h4 class="font-bold text-askbetter-orange mb-2">
+              AI-Aware Optimizations
+            </h4>
+            <p>We use LLM-specific prompt patterns that work.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-askbetter-orange mb-2">
+              Works with Any LLM
+            </h4>
+            <p>ChatGPT, Claude, Gemini — all covered.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-askbetter-orange mb-2">
+              Saves You Tokens
+            </h4>
+            <p>Get to the point — no fluff, no wasted calls.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-askbetter-orange mb-2">
+              Built for Prompt Engineers
+            </h4>
+            <p>Use best practices without overthinking every message.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-8 text-gray-500 text-sm">
+      <p>
+        © 2025 <span class="text-askbetter-blue">Ask</span
+        ><span class="text-askbetter-orange">Better</span>. Built with love by
+        Pantelis.
+      </p>
+      <!-- Add Social Media Links -->
+      <div class="mt-4 space-x-4">
+        <a href="#" class="hover:text-askbetter-blue">Twitter</a>
+        <a
+          href="https://www.linkedin.com/in/pantelis-t-6a7718249/"
+          class="hover:text-askbetter-blue"
+          >LinkedIn</a
+        >
+        <a href="#" class="hover:text-askbetter-blue">GitHub</a>
+      </div>
+    </footer>
+
+    <!-- Optional: JS for mobile-menu toggle and smooth scrolling -->
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // Optional: Close menu when a link is clicked
+      const mobileLinks = document.querySelectorAll(".mobile-menu a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+        });
+      });
+
+      // Optional: Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            // Calculate position considering fixed navbar height (adjust 64 if navbar height changes)
+            const offsetTop = targetElement.offsetTop - 64;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      const form = document.getElementById("waitlist");
+      const successMessage = document.getElementById("success-message");
+
+      form.addEventListener("submit", (e) => {
+        successMessage.classList.remove("hidden");
+
+        // Hide the success message after 5 seconds
+        setTimeout(() => {
+          successMessage.classList.add("hidden");
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>
