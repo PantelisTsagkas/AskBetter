@@ -145,9 +145,12 @@
           </button>
         </form>
 
-        <p id="success-message" class="hidden text-green-500 mt-4">
-          Thank you for joining the waitlist!
-        </p>
+        <!-- Thank You Message -->
+        <div id="thank-you-message" class="hidden text-center mt-6">
+          <h2 class="text-2xl font-bold text-green-500">Thank you for joining the waitlist!</h2>
+          <p class="text-gray-600 mt-2">We’ll be in touch soon.</p>
+        </div>
+
         <p class="mt-4 text-sm text-gray-500">No spam, just early access.</p>
       </div>
     </section>
@@ -322,14 +325,32 @@
       });
 
       const form = document.getElementById("waitlist");
-      const successMessage = document.getElementById("success-message");
+      const thankYouMessage = document.getElementById("thank-you-message");
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault(); // Prevent default submission causing black screen
-        successMessage.classList.remove("hidden");
-        setTimeout(() => {
-          successMessage.classList.add("hidden");
-        }, 5000);
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent default behavior
+
+        // Show the thank-you message
+        thankYouMessage.classList.remove("hidden");
+        form.classList.add("hidden"); // Hide the form after submission
+
+        // Check if running locally or on Netlify
+        if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+          console.log("Simulating form submission in local development.");
+        } else {
+          // Submit the form programmatically to Netlify
+          const formData = new FormData(form);
+          fetch("/", {
+            method: "POST",
+            body: formData,
+          })
+            .then(() => {
+              console.log("Form successfully submitted to Netlify.");
+            })
+            .catch((error) => {
+              console.error("Error submitting the form:", error);
+            });
+        }
       });
     </script>
   </body>
