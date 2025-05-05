@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a8db1e9d-6a59-4d62-9bab-8863a681ed14/deploy-status)](https://app.netlify.com/sites/delightful-kringle-d7bbcd/deploys)
 # AskBetter
 
 Landing page for the AskBetter app – a simple, responsive waitlist sign-up form built with Tailwind CSS and deployed with Netlify.
