@@ -1,0 +1,329 @@
+/* Custom Styles for Construction Landing Page */
+
+/* Construction Grid Background */
+.construction-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Floating Particles */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(249, 115, 22, 0.6);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 6s;
+}
+
+.particle:nth-child(2) {
+  left: 20%;
+  animation-delay: 1s;
+  animation-duration: 8s;
+  background: rgba(59, 130, 246, 0.6);
+}
+
+.particle:nth-child(3) {
+  left: 60%;
+  animation-delay: 2s;
+  animation-duration: 7s;
+}
+
+.particle:nth-child(4) {
+  left: 80%;
+  animation-delay: 3s;
+  animation-duration: 9s;
+  background: rgba(16, 185, 129, 0.6);
+}
+
+.particle:nth-child(5) {
+  left: 90%;
+  animation-delay: 4s;
+  animation-duration: 5s;
+  background: rgba(139, 92, 246, 0.6);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+}
+
+/* UI Blocks Animation */
+.ui-block {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.animate-drop-1 {
+  animation-name: dropBlock;
+  animation-delay: 0.5s;
+}
+
+.animate-drop-2 {
+  animation-name: dropBlock;
+  animation-delay: 1s;
+}
+
+.animate-drop-3 {
+  animation-name: dropBlock;
+  animation-delay: 1.5s;
+}
+
+.animate-drop-4 {
+  animation-name: dropBlock;
+  animation-delay: 2s;
+}
+
+.animate-drop-5 {
+  animation-name: dropBlock;
+  animation-delay: 2.5s;
+}
+
+@keyframes dropBlock {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Crane Animation */
+.crane-cable {
+  animation: swingCable 3s ease-in-out infinite;
+  transform-origin: 520px 103px;
+}
+
+.crane-hook {
+  animation: swingHook 3s ease-in-out infinite;
+}
+
+.lifting-block {
+  animation: liftBlock 4s ease-in-out infinite;
+}
+
+@keyframes swingCable {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes swingHook {
+  0%, 100% { 
+    transform: translate(-2px, 0); 
+  }
+  50% { 
+    transform: translate(2px, 0); 
+  }
+}
+
+@keyframes liftBlock {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  25% { 
+    transform: translateY(-20px); 
+  }
+  75% { 
+    transform: translateY(-10px); 
+  }
+}
+
+/* Worker Animations */
+.worker-1 {
+  animation: walkWorker 4s linear infinite;
+}
+
+.worker-2 .hammer {
+  animation: hammerMotion 1s ease-in-out infinite;
+  transform-origin: 360px 322px;
+}
+
+.worker-3 .carried-box {
+  animation: carryBox 2s ease-in-out infinite;
+}
+
+@keyframes walkWorker {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes hammerMotion {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-45deg); }
+}
+
+@keyframes carryBox {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 100%;
+  height: 12px;
+  background-color: #E5E7EB;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3B82F6, #F97316);
+  border-radius: 6px;
+  width: 0%;
+  transition: width 2s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Construction Button */
+.construction-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.construction-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.construction-btn:hover::before {
+  left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .construction-scene svg {
+    height: 200px;
+  }
+  
+  .particle {
+    width: 3px;
+    height: 3px;
+  }
+  
+  .construction-grid {
+    background-size: 30px 30px;
+  }
+  
+  @keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, 30px); }
+  }
+}
+
+@media (max-width: 480px) {
+  .construction-scene svg {
+    height: 160px;
+  }
+  
+  .ui-block text {
+    font-size: 10px;
+  }
+  
+  .construction-grid {
+    background-size: 25px 25px;
+  }
+  
+  @keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(25px, 25px); }
+  }
+}
+
+/* Loading Animation for Page */
+body {
+  animation: fadeInPage 1s ease-out;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

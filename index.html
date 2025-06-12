@@ -3,355 +3,203 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AskBetter – Smarter AI Prompts</title>
+    <title>AskBetter – Under Construction</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="favicon.ico" />
-    <style>
-      /* Add custom colors if Tailwind defaults aren't exact */
-      .text-askbetter-blue {
-        color: #00529b;
-      } /* Approximate blue from logo */
-      .text-askbetter-orange {
-        color: #f7941e;
-      } /* Approximate orange from logo */
-      .bg-askbetter-orange {
-        background-color: #f7941e;
-      }
-      .hover\:bg-askbetter-orange-dark:hover {
-        background-color: #e0800f;
-      } /* Darker shade for hover */
-      .focus\:ring-askbetter-blue:focus {
-        --tw-ring-color: #00529b;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-white text-gray-800 font-sans pt-16">
-    <!-- NAVBAR -->
-    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo in navbar -->
-          <div>
-            <a href="#hero" class="flex items-center py-4 px-2">
-              <img
-                src="askbetter-logo.png"
-                alt="AskBetter Logo"
-                class="h-28 mr-2"
-              />
-              
-              
-            </a>
-          </div>
-          <!-- Navigation Links -->
-          <div class="hidden md:flex items-center space-x-4">
-            <a
-              href="#hero"
-              class="py-2 px-3 text-gray-700 hover:text-askbetter-blue"
-              >Home</a
-            >
-            <a
-              href="#how-it-works"
-              class="py-2 px-3 text-gray-700 hover:text-askbetter-blue"
-              >How It Works</a
-            >
-            <a
-              href="#features"
-              class="py-2 px-3 text-gray-700 hover:text-askbetter-blue"
-              >Features</a
-            >
-            <a
-              href="#waitlist"
-              class="py-2 px-3 bg-askbetter-orange text-white rounded hover:bg-askbetter-orange-dark transition"
-              >Join Waitlist</a
-            >
-          </div>
-          <!-- Mobile Menu Button (optional) -->
-          <div class="md:hidden flex items-center">
-            <button class="mobile-menu-button p-4">
-              <svg
-                class="w-6 h-6 text-gray-700"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            </button>
-          </div>
+  <body class="bg-gradient-to-br from-blue-50 to-orange-50 min-h-screen overflow-x-hidden">
+    <!-- Construction Scene Container -->
+    <div class="relative min-h-screen flex flex-col items-center justify-center px-4">
+      
+      <!-- Background Construction Elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <!-- Construction Grid Lines -->
+        <div class="construction-grid"></div>
+        
+        <!-- Floating Particles -->
+        <div class="particles">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
         </div>
       </div>
-      <!-- Mobile Menu (optional) -->
-      <div class="mobile-menu hidden md:hidden">
-        <a href="#hero" class="block py-2 px-4 text-sm hover:bg-gray-100"
-          >Home</a
-        >
-        <a
-          href="#how-it-works"
-          class="block py-2 px-4 text-sm hover:bg-gray-100"
-          >How It Works</a
-        >
-        <a href="#features" class="block py-2 px-4 text-sm hover:bg-gray-100"
-          >Features</a
-        >
-        <a
-          href="#waitlist"
-          class="block py-2 px-4 text-sm hover:bg-gray-100 bg-askbetter-orange text-white"
-          >Join Waitlist</a
-        >
-      </div>
-    </nav>
 
-    <!-- HERO -->
-    <section
-      id="hero"
-      class="min-h-screen flex items-center justify-center px-6 text-center bg-gradient-to-br from-blue-50 to-white"
-    >
-      <div class="max-w-2xl">
-        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-          <span class="text-askbetter-blue">Ask</span
-          ><span class="text-askbetter-orange">Better</span> helps you write
-          smarter AI prompts.
+      <!-- Main Content -->
+      <div class="relative z-10 text-center max-w-4xl mx-auto">
+        
+        <!-- Logo -->
+        <div class="mb-8 animate__animated animate__fadeInDown">
+          <img src="askbetter-logo.png" alt="AskBetter Logo" class="h-20 mx-auto mb-4" />
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 animate__animated animate__fadeInUp animate__delay-1s">
+          <span class="text-blue-600">We're building</span><br>
+          <span class="text-orange-500">something better</span>
         </h1>
-        <p class="text-lg text-gray-600 mb-6">
-          Optimize your questions and commands for ChatGPT, Claude, Gemini and
-          more.
-        </p>
-        <form
-          id="waitlist"
-          name="waitlist"
-          method="POST"
-          data-netlify="true"
-          class="flex flex-col sm:flex-row items-center justify-center gap-3"
-        >
-          <input type="hidden" name="form-name" value="waitlist" />
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="Enter your email"
-            class="px-4 py-2 rounded border border-gray-300 w-full sm:w-2/3 focus:outline-none focus:ring-2 focus:ring-askbetter-blue"
-          />
-          <button
-            type="submit"
-            class="px-6 py-2 bg-askbetter-orange text-white rounded hover:bg-askbetter-orange-dark transition"
-          >
-            Join Waitlist
-          </button>
-        </form>
 
-        <!-- Thank You Message -->
-        <div id="thank-you-message" class="hidden text-center mt-6">
-          <h2 class="text-2xl font-bold text-green-500">Thank you for joining the waitlist!</h2>
-          <p class="text-gray-600 mt-2">We’ll be in touch soon.</p>
+        <!-- Construction Scene SVG -->
+        <div class="construction-scene mb-8 animate__animated animate__fadeInUp animate__delay-2s">
+          <svg viewBox="0 0 800 400" class="w-full max-w-2xl mx-auto h-64 md:h-80">
+            <!-- Sky Background -->
+            <rect width="800" height="400" fill="url(#skyGradient)" />
+            
+            <!-- Ground -->
+            <rect x="0" y="350" width="800" height="50" fill="#8B7355" />
+            
+            <!-- Building Foundation -->
+            <rect x="200" y="300" width="400" height="50" fill="#D1D5DB" class="building-foundation" />
+            
+            <!-- Building Blocks (UI Elements) -->
+            <g class="ui-blocks">
+              <!-- Block 1 - Button -->
+              <rect x="220" y="260" width="80" height="40" rx="20" fill="#F97316" class="ui-block animate-drop-1" />
+              <text x="260" y="285" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Button</text>
+              
+              <!-- Block 2 - Input Field -->
+              <rect x="320" y="260" width="120" height="40" rx="8" fill="#3B82F6" class="ui-block animate-drop-2" />
+              <text x="380" y="285" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Input Field</text>
+              
+              <!-- Block 3 - Card -->
+              <rect x="460" y="260" width="100" height="40" rx="12" fill="#10B981" class="ui-block animate-drop-3" />
+              <text x="510" y="285" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Card</text>
+              
+              <!-- Second Row -->
+              <rect x="250" y="220" width="90" height="40" rx="8" fill="#8B5CF6" class="ui-block animate-drop-4" />
+              <text x="295" y="245" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Modal</text>
+              
+              <rect x="360" y="220" width="110" height="40" rx="8" fill="#EF4444" class="ui-block animate-drop-5" />
+              <text x="415" y="245" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Navigation</text>
+            </g>
+            
+            <!-- Crane -->
+            <g class="crane">
+              <!-- Crane Base -->
+              <rect x="580" y="320" width="40" height="30" fill="#6B7280" />
+              <!-- Crane Mast -->
+              <rect x="595" y="100" width="10" height="220" fill="#6B7280" />
+              <!-- Crane Jib -->
+              <rect x="500" y="95" width="200" height="8" fill="#6B7280" />
+              <!-- Crane Hook -->
+              <line x1="520" y1="103" x2="520" y2="130" stroke="#374151" stroke-width="2" class="crane-cable" />
+              <circle cx="520" cy="135" r="5" fill="#374151" class="crane-hook" />
+              
+              <!-- Block being lifted -->
+              <rect x="500" y="140" width="40" height="20" rx="4" fill="#F59E0B" class="lifting-block" />
+              <text x="520" y="155" text-anchor="middle" fill="white" font-size="10" font-weight="bold">AI</text>
+            </g>
+            
+            <!-- Workers -->
+            <g class="workers">
+              <!-- Worker 1 - Walking -->
+              <g class="worker worker-1">
+                <circle cx="150" cy="330" r="8" fill="#FED7AA" />
+                <rect x="145" y="335" width="10" height="15" fill="#3B82F6" />
+                <rect x="143" y="340" width="6" height="8" fill="#1F2937" />
+                <rect x="151" y="340" width="6" height="8" fill="#1F2937" />
+                <!-- Hard hat -->
+                <ellipse cx="150" cy="325" rx="10" ry="6" fill="#F59E0B" />
+              </g>
+              
+              <!-- Worker 2 - Hammering -->
+              <g class="worker worker-2">
+                <circle cx="350" cy="330" r="8" fill="#FED7AA" />
+                <rect x="345" y="335" width="10" height="15" fill="#EF4444" />
+                <rect x="343" y="340" width="6" height="8" fill="#1F2937" />
+                <rect x="351" y="340" width="6" height="8" fill="#1F2937" />
+                <!-- Hard hat -->
+                <ellipse cx="350" cy="325" rx="10" ry="6" fill="#F59E0B" />
+                <!-- Hammer -->
+                <rect x="360" y="320" width="15" height="3" fill="#8B4513" class="hammer" />
+                <rect x="372" y="318" width="6" height="7" fill="#6B7280" />
+              </g>
+              
+              <!-- Worker 3 - Carrying -->
+              <g class="worker worker-3">
+                <circle cx="650" cy="330" r="8" fill="#FED7AA" />
+                <rect x="645" y="335" width="10" height="15" fill="#10B981" />
+                <rect x="643" y="340" width="6" height="8" fill="#1F2937" />
+                <rect x="651" y="340" width="6" height="8" fill="#1F2937" />
+                <!-- Hard hat -->
+                <ellipse cx="650" cy="325" rx="10" ry="6" fill="#F59E0B" />
+                <!-- Carrying box -->
+                <rect x="635" y="315" width="12" height="8" fill="#8B4513" class="carried-box" />
+              </g>
+            </g>
+            
+            <!-- Gradients -->
+            <defs>
+              <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#E0F2FE;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FEF3C7;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
 
-        <p class="mt-4 text-sm text-gray-500">No spam, just early access.</p>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section id="how-it-works" class="py-16 px-6 bg-white">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-semibold mb-10">How It Works</h2>
-        <div class="grid sm:grid-cols-3 gap-8">
-          <div>
-            <!-- Input Icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-16 h-16 mx-auto mb-4 text-askbetter-blue"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
-              />
-            </svg>
-            <h3 class="text-xl font-semibold text-askbetter-blue mb-2">
-              1. Input
-            </h3>
-            <p>Enter your initial AI prompt.</p>
-          </div>
-          <div>
-            <!-- Enhance Icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-16 h-16 mx-auto mb-4 text-askbetter-blue"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9.813 15.75 12 21l2.188-5.25L19.5 13.5l-5.25-2.188L12 6l-2.188 5.313L4.5 13.5l5.313 2.25z"
-              />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M16.5 4.5v1.875m0 0V4.5m0 1.875h1.875m-1.875 0H14.625M19.5 7.5v1.125m0 0V7.5m0 1.125h1.125m-1.125 0H18.375"
-              />
-            </svg>
-            <h3 class="text-xl font-semibold text-askbetter-blue mb-2">
-              2. Enhance
-            </h3>
-            <p>
-              <span class="text-askbetter-blue">Ask</span
-              ><span class="text-askbetter-orange">Better</span> improves it
-              using smart rules and AI feedback.
+        <!-- Progress Section -->
+        <div class="mb-8 animate__animated animate__fadeInUp animate__delay-3s">
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg max-w-md mx-auto">
+            <div class="progress-container mb-4">
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="35"></div>
+              </div>
+            </div>
+            <p class="text-2xl font-bold text-gray-800 mb-2">
+              <span class="progress-text">35</span>% built
             </p>
-          </div>
-          <div>
-            <!-- Copy & Paste Icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-16 h-16 mx-auto mb-4 text-askbetter-blue"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"
-              />
-            </svg>
-            <h3 class="text-xl font-semibold text-askbetter-blue mb-2">
-              3. Copy & Paste
-            </h3>
-            <p>Use the improved prompt in your favorite AI tool.</p>
+            <p class="text-gray-600">Please check back soon!</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="bg-blue-50 py-16 px-6">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-semibold mb-10">
-          Why <span class="text-askbetter-blue">Ask</span
-          ><span class="text-askbetter-orange">Better</span>?
-        </h2>
-        <div class="grid sm:grid-cols-2 gap-8 text-left">
-          <div>
-            <h4 class="font-bold text-askbetter-orange mb-2">
-              AI-Aware Optimizations
-            </h4>
-            <p>We use LLM-specific prompt patterns that work.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-askbetter-orange mb-2">
-              Works with Any LLM
-            </h4>
-            <p>ChatGPT, Claude, Gemini — all covered.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-askbetter-orange mb-2">
-              Saves You Tokens
-            </h4>
-            <p>Get to the point — no fluff, no wasted calls.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-askbetter-orange mb-2">
-              Built for Prompt Engineers
-            </h4>
-            <p>Use best practices without overthinking every message.</p>
+        <!-- Subscribe Form -->
+        <div class="animate__animated animate__fadeInUp animate__delay-4s">
+          <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-md mx-auto">
+            <h3 class="text-xl font-semibold mb-4 text-gray-800">Get notified when we launch</h3>
+            <form id="construction-waitlist" name="construction-waitlist" method="POST" data-netlify="true" class="space-y-4">
+              <input type="hidden" name="form-name" value="construction-waitlist" />
+              <div class="relative">
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Enter your email address"
+                  class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-all duration-300 text-gray-800 placeholder-gray-500"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-gradient-to-r from-blue-600 to-orange-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-700 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 animate__animated animate__pulse animate__infinite animate__slow construction-btn"
+              >
+                Notify Me When Ready
+              </button>
+            </form>
+            
+            <!-- Thank You Message -->
+            <div id="construction-thank-you" class="hidden text-center">
+              <div class="animate__animated animate__bounceIn">
+                <div class="text-6xl mb-4">🎉</div>
+                <h3 class="text-xl font-bold text-green-600 mb-2">You're on the list!</h3>
+                <p class="text-gray-600">We'll notify you as soon as we're ready to launch.</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Footer -->
+        <div class="mt-12 animate__animated animate__fadeInUp animate__delay-5s">
+          <p class="text-gray-600 text-sm">
+            © 2025 <span class="text-blue-600 font-semibold">Ask</span><span class="text-orange-500 font-semibold">Better</span>. 
+            Built with love by Pantelis.
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
 
-    <!-- FOOTER -->
-    <footer class="text-center py-8 text-gray-500 text-sm">
-      <p>
-        © 2025 <span class="text-askbetter-blue">Ask</span
-        ><span class="text-askbetter-orange">Better</span>. Built with love by
-        Pantelis.
-      </p>
-      <!-- Add Social Media Links -->
-      <div class="mt-4 space-x-4">
-        <a href="#" class="hover:text-askbetter-blue">Twitter</a>
-        <a
-          href="https://www.linkedin.com/in/pantelis-t-6a7718249/"
-          class="hover:text-askbetter-blue"
-          >LinkedIn</a
-        >
-        <a href="https://github.com/PantelisTsagkas" class="hover:text-askbetter-blue">GitHub</a>
-      </div>
-    </footer>
-
-    <!-- Optional: JS for mobile-menu toggle and smooth scrolling -->
-    <script>
-      const btn = document.querySelector("button.mobile-menu-button");
-      const menu = document.querySelector(".mobile-menu");
-
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-
-      // Optional: Close menu when a link is clicked
-      const mobileLinks = document.querySelectorAll(".mobile-menu a");
-      mobileLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          menu.classList.add("hidden");
-        });
-      });
-
-      // Optional: Smooth scrolling
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            const offsetTop = targetElement.offsetTop - 64;
-            window.scrollTo({
-              top: offsetTop,
-              behavior: "smooth",
-            });
-          }
-        });
-      });
-
-      const form = document.getElementById("waitlist");
-      const thankYouMessage = document.getElementById("thank-you-message");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Prevent default behavior
-
-        // Show the thank-you message
-        thankYouMessage.classList.remove("hidden");
-        form.classList.add("hidden"); // Hide the form after submission
-
-        // Check if running locally or on Netlify
-        if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-          console.log("Simulating form submission in local development.");
-        } else {
-          // Submit the form programmatically to Netlify
-          const formData = new FormData(form);
-          fetch("/", {
-            method: "POST",
-            body: formData,
-          })
-            .then(() => {
-              console.log("Form successfully submitted to Netlify.");
-            })
-            .catch((error) => {
-              console.error("Error submitting the form:", error);
-            });
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
