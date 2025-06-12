@@ -23,7 +23,15 @@ Coming soon...
 
 ## 📦 How to Run Locally
 
+**Important:** This is a static HTML project that does not use Node.js or npm. Simply open the HTML file directly in your browser.
+
 ```bash
 git clone https://github.com/YOUR_USERNAME/AskBetter.git
 cd AskBetter
+# Open index.html directly in your browser
 open index.html
+```
+
+Or simply double-click the `index.html` file to open it in your default browser.
+
+**Note:** No npm installation or build process is required for this project.
